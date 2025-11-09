@@ -42,6 +42,8 @@ const ALLOWLIST = [
   /^\/v2\/transactions$/i, 
   // Allow pending transaction lookup by txid (path only; querystring like ?format=msgpack is preserved)
   new RegExp(`^/v2/transactions/pending/[A-Z2-7]{52}$`, "i"),
+  // Application lookup
+  /^\/v2\/applications\/\d+$/i,
 ];
 
 // Health check
